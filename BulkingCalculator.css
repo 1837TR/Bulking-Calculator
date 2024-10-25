@@ -1,0 +1,224 @@
+body {
+    background-image: url("../Bulking-Calculator/Resources/backgroundgym.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0px;
+    height: 100vh;
+    width: 100vw;
+    font-family: "Poppins";
+}
+
+.fullscreen {
+    background-color: rgba(255, 255, 255, .3); 
+    backdrop-filter: blur(10px);
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.title h1 {
+    font-size: 86px;
+    margin: 20 0;
+    text-align: center;
+    line-height: 5rem;
+}
+
+.calculator {
+    display: flex;
+    justify-content: center;
+    margin-left: 15px;
+}
+
+table , table , tbody , th , td , tr{
+  background-color: #fff;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: center;
+}
+
+td , th{
+  border-right: #a5a5a5 solid 1px;
+  border-left: #a5a5a5 solid 1px;
+  border-top: #a5a5a5 solid 1px;
+  border-bottom: none;
+  width: 80px;
+}
+
+.numberinput {
+  border: none;
+  width: 79px;
+}
+
+.notopborder{
+  border-top: none;
+  width: 100px;
+}
+
+.widthshort {
+  width: 95px;
+  text-align: right;
+}
+
+#totalcalories , #totalprotein {
+  display: block;
+  text-align: right;
+}
+
+/* input box styling */
+
+.numberinput::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.numberinput[type='number'] {
+    -moz-appearance: textfield;
+}
+
+
+/* add row button */
+
+#addrowdiv {
+    display: flex;
+    align-items: end;
+}
+
+#addrowbutton {
+   font-weight: 700;
+   font-size: 20px;
+   padding: 0px 3px;
+   height: 18px;
+   margin-bottom: 47px;
+   background-color: #fff;
+   border-radius: 20px;
+   line-height: 19px;
+}
+
+#addrowbutton:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+
+
+
+
+
+
+
+
+/* font */
+
+.poppins-thin {
+    font-family: "Poppins", serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .poppins-extralight {
+    font-family: "Poppins", serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  .poppins-light {
+    font-family: "Poppins", serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .poppins-regular {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .poppins-medium {
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .poppins-semibold {
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .poppins-bold {
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .poppins-extrabold {
+    font-family: "Poppins", serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+  
+  .poppins-black {
+    font-family: "Poppins", serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  .poppins-thin-italic {
+    font-family: "Poppins", serif;
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+  .poppins-extralight-italic {
+    font-family: "Poppins", serif;
+    font-weight: 200;
+    font-style: italic;
+  }
+  
+  .poppins-light-italic {
+    font-family: "Poppins", serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .poppins-regular-italic {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .poppins-medium-italic {
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .poppins-semibold-italic {
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+  .poppins-bold-italic {
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  .poppins-extrabold-italic {
+    font-family: "Poppins", serif;
+    font-weight: 800;
+    font-style: italic;
+  }
+  
+  .poppins-black-italic {
+    font-family: "Poppins", serif;
+    font-weight: 900;
+    font-style: italic;
+  }
+  
