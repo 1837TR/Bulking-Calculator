@@ -24,14 +24,19 @@
               <td><input type="number" class="numberinput , goalpro" oninput="calculateRemainingPro()"></td>
             </tr>
             <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
               <td class="widthshort"></td>
               <th>Calories</th>
               <th>Protein</th>
+            </tr>
+            <tr>
+              <td class="notopborder"></td>
+              <td><input type="number" class="numberinput , cal" oninput="calculateSumCal()"></td>
+              <td><input type="number" class="numberinput , pro" oninput="calculateSumPro()"></td>
+            </tr>
+            <tr>
+              <td class="notopborder"></td>
+              <td><input type="number" class="numberinput , cal" oninput="calculateSumCal()"></td>
+              <td><input type="number" class="numberinput , pro" oninput="calculateSumPro()"></td>
             </tr>
             <tr>
               <td class="notopborder"></td>
@@ -52,11 +57,6 @@
               <th class="widthshort">Total</th>
               <td><output id="totalcalories"></output></td>
               <td><output id="totalprotein"></output></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
             </tr>
             <tr id="Remaining">
                <th class="widthshort">Remaining</th>

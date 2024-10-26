@@ -3,7 +3,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0px;
-    height: 100vh;
+    height: 140vh;
     width: 100vw;
     font-family: "Poppins";
 }
@@ -12,7 +12,7 @@ body {
     background-color: rgba(255, 255, 255, .3); 
     backdrop-filter: blur(10px);
     margin: 0;
-    height: 100vh;
+    height: 140vh;
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -80,6 +80,13 @@ td , th{
     -moz-appearance: textfield;
 }
 
+.tall , #total {
+  border-style: none none double none;
+}
+
+#total {
+  border-top: #a5a5a5 solid 2px;
+}
 
 /* add row button */
 
@@ -104,7 +111,20 @@ td , th{
   background-color: #000;
 }
 
+@media only screen and (max-height: 550px) {
+  .title h1 {
+       font-size: 64px;
+       margin: 10% 0;
+       line-height: 3rem;
+    }
+}
 
+@media only screen and (max-height: 470px) {
+  .title h1 {
+       margin: 5% 0;
+       font-size: 52px;
+    }
+}
 
 
 
