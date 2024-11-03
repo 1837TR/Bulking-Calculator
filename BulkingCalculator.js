@@ -3,6 +3,8 @@ let rowscalpro = tablecalpro.getElementsByTagName('tr');
 let cellscal = document.getElementsByClassName('cal');
 let cellspro = document.getElementsByClassName('pro');
 
+/* Calculating Sums */
+
 function calculateSumPro() {
     const inputs = document.querySelectorAll('.pro');
     let sum = 0;
@@ -27,13 +29,12 @@ function calculateSumCal() {
     }
 }
 
+/* Adding Rows Button */
 
 let addRowButton = document.getElementById('addrowbutton');
 let lastRow = document.getElementById('total');
 
-
-
-addRowButton.onclick = function addRow() {
+function addRow() {
     let newRow = document.createElement('tr');
     newRow.classList.add('newrow');
     lastRow.parentNode.insertBefore(newRow, lastRow);
@@ -59,6 +60,10 @@ addRowButton.onclick = function addRow() {
     };
     };
 };
+
+addRowButton.onclick = addRow;
+
+/* Calculating Remainders */
 
 function calculateRemainingCal() {
     let remainCal = document.getElementById('remainingcal');
@@ -90,4 +95,69 @@ function calculateRemainingPro() {
     };
 }
 
+/* AutoSave Function */
+/*
+let CalAndPro1 = document.getElementsByClassName('numberinput')[0];
+
+CalAndPro1.value = localStorage.getItem('CalAndPro1');
+
+CalAndPro1.addEventListener("keyup", logAndShowData);
+
+function logAndShowData() {
+     localStorage.setItem('CalAndPro1', CalAndPro1.value);
+     CalAndPro1.value = localStorage.getItem('CalAndPro1');
+}
+*/
+
+let table = document.getElementById('caloriesandprotein');
+
+function logData() {
+  let CalAndProArray = [];
+  let CalAndProData = document.getElementsByClassName('numberinput');
+  for (let i = 0; i < CalAndProData.length; i++) {
+    CalAndProArray.push(CalAndProData[i].value);
+  }
+
+localStorage.setItem('Data', JSON.stringify(CalAndProArray));
+};
+
+table.addEventListener("keyup", logData);
+
+function loadData() {
+    let inputs = document.getElementsByClassName('numberinput');
+
+    if (localStorage.getItem('Data') === null) { 
+       console.log('value null');
+       return;
+    }
+
+    let retrievedData = JSON.parse(localStorage.getItem('Data')); 
+
+    while (retrievedData.length > inputs.length) {
+       addRow();
+       for (let i = 0; i < inputs.length; i++) {
+        inputs[i].value = retrievedData[i];
+       }
+    }
+
+    for (let i = 0; i < inputs.length; i++) {
+        inputs[i].value = retrievedData[i];
+    }
+}
+
+loadData();
+
+/* Reset Button */
+
+let resetButton = document.getElementById('resetbutton');
+
+resetButton.onclick = function resetData() {
+    localStorage.clear();
+    window.location.reload();
+}
+
+/* Make sure all sums are calculated if pulling from local Storage */
+
+calculateSumPro();
+calculateSumCal();
 

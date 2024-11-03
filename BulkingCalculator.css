@@ -111,12 +111,42 @@ td , th{
   background-color: #000;
 }
 
+/* reset button */
+
+.resetdiv {
+  display: flex;
+  justify-content: end;
+}
+
+#resetbutton {
+  border: #000 solid 2px;
+  width: fit-content;
+  padding: 5px;
+  margin: 25px 57px 0px 0px;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+  font-weight: 500;
+}
+
+#resetbutton:hover {
+  color: #000;
+  background-color: #fff;
+  border: #fff solid 2px;
+}
+
+/* responsive design */
+
 @media only screen and (max-height: 550px) {
   .title h1 {
        font-size: 64px;
        margin: 10% 0;
        line-height: 3rem;
     }
+
+  #resetbutton {
+    margin: 25px 20px 0px 0px;
+  }
 }
 
 @media only screen and (max-height: 470px) {
@@ -125,6 +155,7 @@ td , th{
        font-size: 52px;
     }
 }
+
 
 
 
